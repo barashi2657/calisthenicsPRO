@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תוכניות אימון קליסטניקס</title>
+    <link rel="stylesheet" href="chatgpt-style.css">
+</head>
+<body>
+
+<!-- כפתור לפתיחת התפריט בטלפון-->
+<button class="menu-btn" onclick="toggleNav()">☰</button>
+<!-- סרגל ניווט למובייל-->
+<nav id="sideNav" class="nav-mobile">
+    <ul>
+        <li><a href="#programs-samples">תוכניות אימון</a></li>
+        <li><a href="kosher-m.html">מוצרים</a></li>
+        <li><a href="kosher-o.html">על קליסטניקס</a></li>
+        <li><a href="kosher-tz.html">צור קשר</a></li>
+    </ul>
+</nav>
+
+<header class="nav-pc">
+    <div class="logo"><a class="a-logo" href="#">calisthenics PRO</a></div>
+    <div class="button-start"><button class="btn-head" onclick="location.href='chatgpt-imun.html';">התחל עכשיו</button></div>
+<div class="ul-div">
+    <ul class="nav-links">
+        <li><a href="#programs-samples">תוכניות אימון</a></li>
+        <li><a href="kosher-m.html">מוצרים</a></li>
+        <li><a href="kosher-o.html">על קליסטניקס</a></li>
+        <li><a href="kosher-tz.html">צור קשר</a></li>
+    </ul>
+</div>
+</header>
+
+<!-- כותרת ראשית -->
+<div class="header-section">
+    <div>
+        <h1 class="h1-head" style="color: white;">שנה את הגוף שלך</h1>
+        <h1 class="h1-head" style="color: orange;">עם קליסטניקס</h1>
+        <div>
+            <p class="p-head">שלטו במשקל הגוף שלכם והשג כוח,גמישות ושליטה מדהימים באמצעות תוכניות האימון המיוחדות שלנו.</p>
+            <button class="btn-body">להתחיל אימון</button>
+        </div>
+    </div>
+</div>
+
+<!-- טעימה 1 אודות קליסטניקס -->
+<div class="teyma-1">
+    <h1 class="h1-div-teyma-1">
+        <span class="s1-black">למה לבחור</span>
+        <span class="s1-red">בקליסטניקס?</span>
+    </h1>
+    <div class="teyma-1-db">
+        <div class="teyma-1-dt">
+            <div class="teyma-logo1"></div>
+            <h2 style="margin-right: 30px; margin-bottom: 0px;">אין צורך בציוד</h2>
+            <p style="margin-right: 30px; margin-left: 30px;">השתמש במשקל הגוף שלך כהתנגדות כדי לבנות כוח בכל מקום ובכל זמן ללא ציוד כושר יקר.</p>
+        </div>
+        <div class="teyma-2-dt">
+            <div class="teyma-logo2"></div>
+            <h2 style="margin-right: 30px; margin-bottom: 0px;">חוזק פונקציונלי</h2>
+            <p style="margin-right: 30px; margin-left: 30px;">לפתח כוח ישים בעולם האמיתי ולשפר קואורדינציה, שיווי משקל ושליטה בגוף.</p>
+        </div>
+        <div class="teyma-3-dt">
+            <div class="teyma-logo3"></div>
+            <h2 style="margin-right: 30px; margin-bottom: 0px;">מערכת פרוגרסיבית</h2>
+            <p style="margin-right: 30px; margin-left: 30px;">עקוב אחר התקדמות מובנות מתנועות מתחילים ועד מתקדמות לשיפור מתמיד.</p>
+        </div>
+    </div>
+</div>
+
+<div class="teyma-2">
+    <h1 class="h1-div-teyma-2">תוכניות כושר</h1>
+    <p>גלה את תוכניות הכושר המיוחדות שלנו המיועדות לכל רמות הכושר</p>
+</div>
+
+<div class="teyma-3">
+</div>
+
+<div class="start-footer">
+    <h2 style=" margin: 0px; font-size: 40px; padding-top: 100px;">מוכן להתחיל את המסע שלך?</h2>
+    <p style="font-size: 25px;">הצטרפו לאלפי אחרים ששינו את גופם וחייהם באמצעות קליסטניקס</p>
+    <button class="btn-start-down" onclick="location.href='chatgpt-imun.html';">התחל עכשיו</button>
+</div>
+
+
+<!-- Footer -->
+<footer style="background-color: #ff6600; padding: 20px 0;">
+    <hr><p style="font-size: 14px; margin-top: 20px; color: white; text-align: center;">© 2025 כל הזכויות שמורות לנחמן בראשי</p>
+</footer>
+
+    <script>
+        function toggleNav() {
+            var sideNav = document.getElementById("sideNav");
+            if (sideNav.style.right === "0px") {
+                sideNav.style.right = "-250px";
+            } else {
+                sideNav.style.right = "0";
+            }
+        }
+
+        // פונקציה לסגירת התפריט אם לוחצים מחוץ אליו
+        document.addEventListener("click", function (event) {
+            var sideNav = document.getElementById("sideNav");
+            var menuBtn = document.querySelector(".menu-btn");
+
+            // בודק אם הלחיצה הייתה מחוץ לתפריט ולכפתור
+            if (sideNav.style.right === "0px" &&
+                !sideNav.contains(event.target) &&
+                !menuBtn.contains(event.target)) {
+                sideNav.style.right = "-250px";
+            }
+        });
+    </script>
+
+</body>
+</html>
