@@ -74,18 +74,7 @@ body {
     transform: scale(1.1);
 }
 
-/* בכדי להסתיר את כפתור הניווט במחשב */
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
-    .nav-mobile{
-        display: block;
-    }
-    .nav-pc {
-        display: none;
-    }
-}
+
 
 /* סרגל ניווט */
 .nav-mobile{
@@ -266,6 +255,7 @@ header {
     text-align: center;
     margin: 0px;
     padding: 60px;
+    display: block;
 }
 .s1-black{
     color: black;
@@ -472,24 +462,75 @@ header {
   background: linear-gradient(45deg, #000000, #000000); /* צבעים בעת לחיצה */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px rgba(255, 255, 255, 0.5); /* צללים חלשים יותר בעת לחיצה */
 }
+.p-head-mobile{
+     display: none;
+    }
+.h1-head-mobile{
+    display: none;
+}
 
 /* בכדי להסתיר את כפתור הניווט במחשב */
 @media (max-width: 515px) {
-    .h1-head{
-        font-size: 5em;
+    .h1-head-mobile{
+        display: block;
         margin: 0;
     }
-    .p-head{
-        font-size: 20px;
+    .p-head-mobile{
         color: #ffffff;
         margin-top: 0px;
         margin-bottom: 20px;
+        display: block;
     }
 }
 
 
-
-
+/* בכדי להסתיר את כפתור הניווט במחשב */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+    .nav-mobile{
+        display: block;
+    }
+    .nav-pc {
+        display: none;
+    }
+    .h1-head{
+        display: none;
+    }
+    .p-head{
+        display: none;
+    }
+    .h1-head-mobile{
+        display: block;
+        margin: 0;
+    }
+    .p-head-mobile{
+        color: #ffffff;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .teyma-1-dt{
+        width: 90%;
+        float: left;
+    }
+    .teyma-2-dt{
+        width: 90%;
+        float: left;
+        
+    }
+    .teyma-3-dt{
+        width: 90%;
+        float: left;
+    }
+    .teyma-1-db{
+        height: 900px;
+    }
+    .teyma-1{
+        height: 900px;
+    }
+}
 
 
     </style>
@@ -527,14 +568,21 @@ header {
 <!-- כותרת ראשית -->
 <div class="header-section">
     <div class="header-section2">
+        <h1 class="h1-head-mobile" style="color: white;">שנה את הגוף שלך</h1>
+        <h1 class="h1-head-mobile" style="color: orange;">עם קליסטניקס</h1>
+        <!-- מובייל -->
         <h1 class="h1-head" style="color: white;">שנה את הגוף שלך</h1>
         <h1 class="h1-head" style="color: orange;">עם קליסטניקס</h1>
+
+
         <div>
             <p class="p-head">שלטו במשקל הגוף שלכם והשג כוח,גמישות ושליטה מדהימים באמצעות תוכניות האימון המיוחדות שלנו.</p>
             <button class="btn-body" onclick="location.href='imun-1.html';">להתחיל אימון</button>
         </div>
     </div>
 </div>
+
+
 
 <!-- טעימה 1 אודות קליסטניקס -->
 <div class="teyma-1">
