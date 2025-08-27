@@ -474,26 +474,16 @@ header {
 }
 .p-head-mobile{
      display: none;
-    }
+}
+.p-head-tablet{
+    display: none;
+}
 .h1-head-mobile{
     display: none;
 }
-
-/* בכדי להסתיר את כפתור הניווט במחשב */
-@media (max-width: 515px) {
-    .h1-head-mobile{
-        display: block;
-        margin: 0;
-    }
-    .p-head-mobile{
-        color: #ffffff;
-        margin-top: 0px;
-        margin-bottom: 20px;
-        display: block;
-    }
+.h1-head-tablet{
+    display: none;
 }
-
-
 /* בכדי להסתיר את כפתור הניווט במחשב */
 @media (max-width: 768px) {
     .menu-btn {
@@ -508,18 +498,25 @@ header {
     .h1-head{
         display: none;
     }
+    .h1-head-mobile{
+        display: none;
+    }
+    .h1-head-tablet{
+        font-size: 4em;
+        margin: 0;
+        padding-right: 20px;
+        display: block;
+    }
     .p-head{
         display: none;
     }
-    .h1-head-mobile{
-        display: block;
-        margin: 0;
-    }
     .p-head-mobile{
-        color: #ffffff;
-        margin-top: 0px;
-        margin-bottom: 20px;
+        display: none;
+    }
+    .p-head-tablet{
         display: block;
+        color: white;
+        font-size: 20px;
     }
     .teyma-1-dt{
         width: 90%;
@@ -538,6 +535,36 @@ header {
         height: 900px;
     }
 }
+/* בכדי להסתיר את כפתור הניווט במחשב */
+@media (max-width: 523px) {
+    .h1-head-mobile{
+        display: block;
+        font-size: 3em;
+        padding-right: 20px;
+    }
+    .h1-head{
+        display: none;
+    }
+    .h1-head-tablet{
+        display: none;
+    }
+    .p-head-mobile{
+        color: #ffffff;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        display: block;
+        font-size: 20px;
+    }
+    .p-head-tablet{
+        display: none;
+    }
+    .p-head{
+        display: none;
+    }
+}
+
+
+
 
 
     </style>
@@ -575,15 +602,24 @@ header {
 <!-- כותרת ראשית -->
 <div class="header-section">
     <div class="header-section2">
+        <!--כותרת למובייל-->
         <h1 class="h1-head-mobile" style="color: white;">שנה את הגוף שלך</h1>
         <h1 class="h1-head-mobile" style="color: orange;">עם קליסטניקס</h1>
-        <!-- מובייל -->
+        <!-- כותרת למחשב-->
         <h1 class="h1-head" style="color: white;">שנה את הגוף שלך</h1>
         <h1 class="h1-head" style="color: orange;">עם קליסטניקס</h1>
+        <!-- כותרת לטבלט-->
+        <h1 class="h1-head-tablet" style="color: white;">שנה את הגוף שלך</h1>
+        <h1 class="h1-head-tablet" style="color: orange;">עם קליסטניקס</h1>
 
 
         <div>
+            <!--טקסט למחשב-->
             <p class="p-head">שלטו במשקל הגוף שלכם והשג כוח,גמישות ושליטה מדהימים באמצעות תוכניות האימון המיוחדות שלנו.</p>
+            <!--טקסט מובייל-->
+            <p class="p-head-mobile">שלטו במשקל הגוף שלכם והשג כוח,גמישות ושליטה מדהימים באמצעות תוכניות האימון המיוחדות שלנו.</p>
+            <!--טקסט לטבלט-->
+            <p class="p-head-tablet">שלטו במשקל הגוף שלכם והשג כוח,גמישות ושליטה מדהימים באמצעות תוכניות האימון המיוחדות שלנו.</p>
             <button class="btn-body" onclick="location.href='imun-1.html';">להתחיל אימון</button>
         </div>
     </div>
@@ -672,3 +708,4 @@ header {
 
 </body>
 </html>
+
