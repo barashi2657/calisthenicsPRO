@@ -46,18 +46,6 @@ body {
     font-size: 17px;
     
 }
-/* בכדי להסתיר את כפתור הניווט במחשב */
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
-    .nav-mobile{
-        display: block;
-    }
-    .nav-pc {
-        display: none;
-    }
-}
 /* כפתור תפריט */
 .menu-btn {
     display: none; /* בכדי שלא יופיע על מסכים גדולים */
@@ -119,6 +107,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #FF9800;
 }
+
 
 /* סרגל ניווט במחשב  */
 header {
@@ -182,47 +171,6 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px rgba(255, 165, 0, 0.5); /* צללים חלשים יותר בעת לחיצה */
   transform: scale(1.1); /* הגדלת הכפתור ב-10% בעת לחיצה */
 }
-
-/* כפתור בכותרת של האתר */
-.btn-body {
-  background: linear-gradient(45deg, #e74c3c, #c0392b); /* מעבר צבעים בין שני אדומים */
-  color: white; /* צבע הטקסט של הכפתור */
-  padding: 12px 25px; /* מרווח פנימי (padding) */
-  font-size: 16px; /* גודל הפונט */
-  font-weight: bold; /* עיבוי הפונט */
-  border: none; /* ללא גבול סביב הכפתור */
-  border-radius: 30px; /* פינות מעוגלות */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px rgba(255, 165, 0, 0.6); /* צללים עם הילה זוהרת סביב הכפתור */
-  cursor: pointer; /* מורה על כך שהכפתור הוא אלמנט שניתן ללחוץ עליו */
-  transition: all 0.3s ease; /* אנימציה חלקה לשינויים בכפתור (כמו צבעים, צללים וגדילה) */
-  display: inline-flex; /* שימוש ב-inline-flex כדי לא להפר את מבנה הכפתור */
-  align-items: center; /* מיישר את התוכן במרכז האנכי */
-  direction: rtl; /* מיישר את הטקסט לימין (עברית) */
-}
-
-.btn-body:after {
-  content: '←'; /* חץ לכיוון ימין */
-  font-size: 18px; /* גודל החץ */
-  margin-right: 10px; /* מרווח בין החץ לבין הטקסט */
-  transition: transform 0.3s ease; /* אנימציה חלקה לחץ */
-}
-
-.btn-body:hover {
-  background: linear-gradient(45deg, #c0392b, #e74c3c); /* שינוי כיוון המעבר בין הצבעים בעת ריחוף */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 165, 0, 0.8); /* צללים חזקים יותר והילה יותר זוהרת בעת ריחוף */
-  /*transform: scale(1.1); ----- הגדלת הכפתור ב-10% בעת ריחוף */
-}
-
-.btn-body:hover:after {
-  transform: translateX(-10px); /* החץ יזוז ימינה */
-}
-
-.btn-body:active {
-  background: linear-gradient(45deg, #c0392b, #e74c3c); /* צבעים בעת לחיצה */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 0 15px rgba(255, 165, 0, 0.5); /* צללים חלשים יותר בעת לחיצה */
-}
-
-
 .nav-pc{
     width: 96.5%;
     height: 50px;
@@ -230,16 +178,12 @@ header {
 .logo {
     font-size: 30px;
     font-weight: bold;
+    color: #ff5733;
     position: relative;
     float: left;
     margin-top: 6px;
 }
-.s-orange{
-    color: #ff5733;
-}
-.s-red{
-    color: red;
-}
+
 .button-start{
     width: 20%;
     float: right;
@@ -251,12 +195,30 @@ header {
     margin: auto;
 }
 
+.in-body{
+    min-height: 1px;
+    width: 100%;
+    margin: 0px;
+}
+
+/* בכדי להסתיר את כפתור הניווט במחשב */
+@media (max-width: 768px) {
+        .menu-btn {
+            display: block;
+        }
+        .nav-mobile{
+            display: block;
+        }
+            .nav-pc {
+        display: none;
+        }
+    }
+
     </style>
 <body>
 
-<!-- כפתור לפתיחת התפריט בטלפון-->
+   <!-- header mobile-->
 <button class="menu-btn" onclick="toggleNav()">☰</button>
-<!-- סרגל ניווט למובייל-->
 <nav id="sideNav" class="nav-mobile">
     <ul>
         <li><a href="#programs-samples">תוכניות אימון</a></li>
@@ -266,20 +228,28 @@ header {
     </ul>
 </nav>
 
+<!-- header PC-->
 <header class="nav-pc">
+    <!--לוגו כיתוב-->
     <div class="logo"><a class="a-logo" href="#">
-        <span class="s-orange">calisthenics</span>
-        <span class="s-red">PRO</span></a></div>
-    <div class="button-start"><button class="btn-head">התחל עכשיו</button></div>
-<div class="ul-div">
-    <ul class="nav-links">
-        <li><a href="#programs-samples">תוכניות אימון</a></li>
-        <li><a href="kosher-m.html">מוצרים</a></li>
-        <li><a href="kosher-o.html">על קליסטניקס</a></li>
-        <li><a href="kosher-tz.html">צור קשר</a></li>
-    </ul>
-</div>
+        <span style="color: rgb(235, 63, 0);">calisthenics</span>
+        <span style="color: rgb(209, 0, 0);">PRO</span>
+    </a>
+    <!--כפתור התחלה-->
+    </div>
+    <div class="button-start"><button class="btn-head" onclick="location.href='imun-1.html';">התחל עכשיו</button></div>
+    <div class="ul-div">
+        <ul class="nav-links">
+            <li><a href="#programs-samples">תוכניות אימון</a></li>
+            <li><a href="kosher-m.html">מוצרים</a></li>
+            <li><a href="kosher-o.html">על קליסטניקס</a></li>
+            <li><a href="kosher-tz.html">צור קשר</a></li>
+        </ul>
+    </div>
 </header>
+
+<!--לזכור לשנות בקוד CSS את הגובה לפיקסל אחד-->
+<div class="in-body"></div>
 
 <!-- כותרת ראשית -->
 <div id="header-section">
@@ -292,19 +262,14 @@ header {
 
 
 
-
-
 <!-- Footer -->
-<footer style="background-color: #111; padding: 20px 0; text-align: center; color: white; margin-top: 40px;">
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
-        <a href="kosher-tz.html" style="color: #FF9800; text-decoration: none; font-size: 16px; font-weight: bold;">צור קשר</a>
-        <a href="kosher-tnaei.html" style="color: #FF9800; text-decoration: none; font-size: 16px; font-weight: bold;">תנאי שימוש</a>
-        <a href="kosher-mediniut.html" style="color: #FF9800; text-decoration: none; font-size: 16px; font-weight: bold;">מדיניות פרטיות</a>
-    </div>
-    <p style="font-size: 14px; margin-top: 20px; color: #FF9800;">© 2025 כל הזכויות שמורות לנחמן בראשי</p>
+<footer style="background-color: #ff6600; padding: 20px 0;">
+    <hr><p style="font-size: 14px; margin-top: 20px; color: white; text-align: center;">© 2025 כל הזכויות שמורות לנחמן בראשי</p>
 </footer>
 
+
     <script>
+        // פונקצייה לפתיחת התפריט ניווט מהצד במובייל
         function toggleNav() {
             var sideNav = document.getElementById("sideNav");
             if (sideNav.style.right === "0px") {
@@ -330,3 +295,4 @@ header {
 
 </body>
 </html>
+
